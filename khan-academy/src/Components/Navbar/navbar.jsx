@@ -1,7 +1,24 @@
-import React from "react";
+
 import styles from "./navbar.css";
+import React, { useState } from "react";
 
 const Navbar = () => {
+
+  const [showDiv , setShowDiv] = useState(false);
+
+  const handelDivVisibility = () =>{
+      if(showDiv === false){
+          document.querySelector(".dropdown").style.visibility = "visible";
+          console.log("I am clicked")
+          setShowDiv(true);
+      }
+      else if(showDiv === true){
+          document.querySelector(".dropdown").style.visibility = "hidden";
+          setShowDiv(false);
+      }
+  }  
+
+
   return (
     <>
       <div className="div-navbar">
@@ -11,7 +28,7 @@ const Navbar = () => {
             <div className="nav-left">
 
               <div className="nav-courses">
-                <button className="courses-btn">
+                <button  className="courses-btn" onClick={handelDivVisibility}>
                   <span>
                     Courses
                     <span>
@@ -28,6 +45,7 @@ const Navbar = () => {
                     </span>
                   </span>
                 </button>
+                {/* <div className="dropdown1"></div> */}
                 <div className="dropdown">
                   <ul className="drop-ul">
 
@@ -497,6 +515,7 @@ const Navbar = () => {
 
                   </ul>
                 </div>
+                
               </div>
 
               <div className="nav-search">

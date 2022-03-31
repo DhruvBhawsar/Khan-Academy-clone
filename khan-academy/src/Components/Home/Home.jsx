@@ -1,6 +1,8 @@
 import React from "react";
 import Styles from "./Home.css";
-import reactSelect from "react-select";
+import main from "../../../src/main.png"
+import teachers from "../../../src/teachers.png"
+
 
 const Home = () => {
   return (
@@ -8,11 +10,11 @@ const Home = () => {
       <div className="home">
         <div className="div-main">
           <div className="main-pic">
-            <svg />
+            <img src={main} alt="" />
           </div>
 
           <div className="main-right">
-            <h1 className="h1">
+            <h1 className="main-h1">
               <span className="h1-span">For every student,</span>
               <span>every classroom.</span>
               <span>Real results.</span>
@@ -38,6 +40,7 @@ const Home = () => {
               </a>
             </div>
           </div>
+
         </div>
       </div>
 
@@ -303,7 +306,7 @@ const Home = () => {
 
       <div className="main3">
           <div className="main3-svg">
-              <img src="" alt="" />
+              <img src={teachers} alt="" />
           </div>
           <div className="main3-right">
               <span className="main3-span1">Teachers</span>
